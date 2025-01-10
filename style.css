@@ -1,6 +1,14 @@
+:root {
+    --primary-color: #666;
+    --border-color: black;
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 30px;
+}
+
 * {
     margin: 0;
-    padding:0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -16,22 +24,27 @@ body {
     min-width: 500px;
     max-width: 800px;
     height: 50vh;
-    margin: 30px auto;
-    padding: 20px;
-    border: 2px solid black;
+    margin: var(--spacing-lg) auto;
+    padding: var(--spacing-md);
+    border: 2px solid var(--border-color);
     border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
 .title {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: var(--spacing-sm);
 }
 
 .subtitle {
     font-size: 16px;
-    color: #666;
-    margin-bottom: 20px;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
 }
 
 /*/// timetable start ///*/
@@ -41,7 +54,7 @@ body {
     min-height: 200px;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: var(--spacing-md);
 }
 
 .timeline {
@@ -53,16 +66,15 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width:2px;
+    width: 2px;
     height: 100%;
-    background-color: #666;
+    background-color: var(--primary-color);
 }
 
-.dots, .dates,.discriptions {
+.dots, .dates, .discriptions {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-
 }
 
 .dates {
@@ -73,23 +85,35 @@ body {
     position: absolute;
     top: 0;
     left: -4px;
-    width:10px;
+    width: 10px;
     height: 100%;
-
 }
 
 .dots .dot {
-    width:10px;
+    width: 10px;
     height: 10px;
-    background-color: #666;
+    background-color: var(--primary-color);
     border-radius: 50%;
+    transition: transform 0.3s ease;
 }
-/*/// timetable end ///*/
 
+.dots .dot:hover {
+    transform: scale(1.5);
+    background-color: var(--border-color);
+}
+
+.description {
+    transition: color 0.3s ease;
+}
+
+.description:hover {
+    color: var(--border-color);
+    font-weight: 500;
+}
 
 /*/// Viewfull start ///*/
 .Viewfull {
-    display:flex;
+    display: flex;
     justify-content: center;
     text-align: center;
     margin-top: 20px;
@@ -97,6 +121,11 @@ body {
     color: white;
     padding: 10px 20px;
     border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.Viewfull:hover {
+    transform: translateY(-2px);
 }
 
 .Viewfull a {
