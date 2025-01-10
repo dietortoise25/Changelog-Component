@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 50vh;
+    margin: 30px auto;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/*/// timetable start ///*/
+.timetable {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    gap: 20px;
+}
+
+.timeline {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:2px;
+    height: 100%;
+    background-color: #666;
+}
+
+.dots, .dates,.discriptions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.dates {
+    align-items: flex-end;
+}
+
+.dots {
+    position: absolute;
+    top: 0;
+    left: -4px;
+    width:10px;
+    height: 100%;
+
+}
+
+.dots .dot {
+    width:10px;
+    height: 10px;
+    background-color: #666;
+    border-radius: 50%;
+}
+/*/// timetable end ///*/
+
+
+/*/// Viewfull start ///*/
+.Viewfull {
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.Viewfull a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.Viewfull a:hover {
+    text-decoration: underline;
+}
+
