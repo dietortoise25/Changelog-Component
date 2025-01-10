@@ -135,6 +135,8 @@ body {
 }
 
 .Viewfull a:hover {
-    text-decoration: underline;
+    /*text-decoration: underline;*/
+    background-color:#fff;
+    color:#000;
 }
 
